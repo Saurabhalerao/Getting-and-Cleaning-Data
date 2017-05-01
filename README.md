@@ -31,19 +31,4 @@ Read Features files.
 
 9) create tidy ,independent data set
 
-Concatenate the data tables by rows.
-set names to variables.
-Merge columns to get the data frame Data for all data.
-Extracts only the measurements on the mean and standard deviation for each measurement.
-
-Subset Name of Features by measurements on the mean and standard deviation.
-Subset the data frame Data by selected names of Features.
-Uses descriptive activity names to name the activities in the data set.
-
-Read descriptive activity names from activity_labels.txt
-Factorize variable activity in the data frame Data using descriptive activity names.
-Appropriately labels the data set with descriptive variable names.
-
-Creates a independent tidy dataset that consists of the average (mean) value of each variable for each subject and activity pair.
-
 Final output file is "final tidydata.txt"
