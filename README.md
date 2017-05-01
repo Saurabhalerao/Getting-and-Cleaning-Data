@@ -46,4 +46,4 @@ Appropriately labels the data set with descriptive variable names.
 
 Creates a independent tidy dataset that consists of the average (mean) value of each variable for each subject and activity pair.
 
-Final output file is tidydata.txt
+Final output file is "final tidydata.txt"
