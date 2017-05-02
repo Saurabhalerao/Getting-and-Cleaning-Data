@@ -66,6 +66,8 @@ Data<-subset(Data,select=selectedNames)
 
 activityLabels <- read.table(file.path(path_rf, "activity_labels.txt"),header = FALSE)
 
+Data$activity<-factor(Data$activity,labels=activityLabels[,2])
+
 ## Step 8: label the data set with appropriate descriptive variable name
 
 names(Data)<-gsub("^t", "time", names(Data))
@@ -77,10 +79,11 @@ names(Data)<-gsub("BodyBody", "Body", names(Data))
 
 ## Step 9: create tidy ,independent data set
 
-library(plyr);
+library(plyr)
 Data2<-aggregate(. ~subject + activity, Data, mean)
 Data2<-Data2[order(Data2$subject,Data2$activity),]
-write.table(Data2, file = "final tidydata.txt",row.name=FALSE)
+write.table(Data2, file = "final tidydata.txt",row.name=FALSE,quote = FALSE, sep = '\t')
+
 
 
 
